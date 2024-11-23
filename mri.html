@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Image Translation - Farah Ahmed Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+                <div id="intro">
+                    <h1>Portfolio<br />
+                        Project 4</h1>
+                    
+                        <a href=""></a><a href="https://github.com/ftasnimahmed/T1w-to-T2w-image-translation-using-GANs">@github.</a> <a href="https://www.linkedin.com/in/farah-ahmed-549044243/"></a></p>
+                    <ul class="actions">
+                        <!-- <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li> -->
+                    </ul>
+                </div>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Intro</a></li>
+                            <li><a href="predictedcarprice.html">Project 1</a></li>
+							<li><a href="travelers.html">Project 2</a></li>
+                            <li><a href="infographic.html">Project 3</a></li>
+                            <li class="active"><a href="mri.html">Project 4</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									
+									<h1 style="font-size: 55px;">T1w-to-T2w-image-translation-using-GANs</h1>          
+									
+								</header>
+								<div class="image main"><img src="images/mri.jpg" alt="" /></div>
+                                <h1 style="font-size: 24px;">Project Description: </h1>
+								<p>
+                                    
+                                    MRI is a powerful imaging modality commonly used for disease detection, diagnosis, and treatment monitoring. Two most widely used MRI sequences are T1-weighted and T2-weighted scans. Both the images are produced by varying echo time (TE) and repetition time (TR) [1]. The TE and TR can be considered as a variable to switch between T1 and T2 images. The contrast and brightness of the images are predominately determined by T1 properties of tissue. Conversely, T2-weighted images are produced by using longer TE and TR times [5]. In these images, the contrast and brightness are predominately determined by the T2 properties of tissue. Using these T1 and T2 protocols we can highlight certain tissue properties which are specific for diagnosis. From medical image diagnosis perspective, T2 images have higher advantage over T1 since the images acquired using T2 protocol have a greater number of features embedded in the soft tissues. However, T2 protocol is a slow process due to long TE and TR. Therefore, T2 weighted images are often hard to acquire due to high susceptibility to motion artifacts.
+                                    Medical image-to-image translation is a robust approach that involves the synthesis of a missing target modality, guided by a cross-modality mapping [2]. Recently, image-to-image translation networks have appeared as adaptable solutions for predicting and generating images in natural scenes by mapping images to various visual representations, such as edges, segments, semantic labels, as well as mapping labels to realistic images [3]. Mapping T1w-to-T2w MRI is challenging due to their non-linear and distinct characteristics [1]. If we can go beyond these constraints, there is a huge benefit for machine learning algorithms. In this project we are trying to address this problem by generating synthetic data which we cannon practically generate using MRI machines due to hardware limitations. <p>
+                                
+                                
+                                <h1 style="font-size: 24px;">Datasets: </h1>
+                                </p>
+                                The problem statement requires T1 and T2 images from an MRI dataset. So, we have chosen MICCAI BraTS 2018 dataset. The dataset consists of T1 and T2. All the data is acquired using clinically acquired 3T multimodal MRI scans. The dataset is acquired as 3D data with multiple slices. So, the dataset processing pipeline has selected mid 64 slices of the 3D images from both modalities and saved separately to a folder.<p>
+                                    <div class="image-gallery">
+                                        <img src="images/Phase_1_Presentation.001.png" style="width: 500px; height: 300px;" alt="Main Picture" />
+                                        </div>
+                                <h1 style="font-size: 24px;">Method: </h1>
+                                </p>
+                                For supervised part, we had paired aligned T1w-T2w images, therefore, we implemented supervised Pix2Pix which is a commonly used mode in GANs. Pix2Pix network consists of one generator (G) and one discriminator (D). The generator takes an image from T1w domain and generate synthetic T2w image, and the discriminator D takes the generated image from G and predicts if it’s real or fake. <p>
+                                
+                                <div class="image-gallery">
+                                    <img src="images/Screen Shot 2024-11-22 at 10.27.22 PM.png" style="width: 500px; height: 300px;" alt="Main Picture" />
+                                    </div>
+                                
+                                <h1 style="font-size: 24px;">Results: </h1>
+                                <p>
+                                    During the inference process using the Pix2Pix GAN, we generated synthetic T2w images corresponding to T1w images. It is worth noting that, similar to supervised learning, the generated images maintained the overall gross structure of the ground truth images. However, the generator smoothed out small features during the synthesis process.
+                                
+                                    <div class="image-gallery">
+                                        <img src="images/Screen Shot 2024-11-22 at 10.36.17 PM.png" style="width: 700px; height: 400px;" alt="Main Picture" />
+                                        </div>
+                                </p>
+
+                                    <p>
+                                        <h1 style="font-size: 24px;">Discussion & Conclusion: </h1>
+                                        In this project, I demonstrated the use of a conditional adversarial network for T1w-T2w brain image translation in a supervised learning phase. Using paired and aligned brain datasets for two different MRI contrasts allowed me to achieve better results. The conditional GAN, combined with pixel-wise L1 loss, effectively smoothed out small features by promoting sparsity through L1 regularization. While this approach achieved promising results, incorporating unsupervised methods could further enhance the model's capability by generating new features and handling unpaired datasets, making it more practical for real-world scenarios.
+                                    </p>
+                                
+
+
+                                
+								
+							</section>
+
+					</div>
+
+				
+							
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
