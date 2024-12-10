@@ -4687,3 +4687,49 @@ input, select, textarea {
 		}
 
 	}
+
+
+
+	/* Contact Me Section */
+	.contact-container {
+		background-color: #f9f9f9; /* Light background */
+		padding: 20px;
+		border-radius: 10px;
+		margin: 20px 0;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.contact-container h3 {
+		text-align: center;
+		color: #333; /* Darker text color */
+	}
+
+	.contact-container form {
+		max-width: 600px;
+		margin: 0 auto;
+		font-family: Arial, sans-serif;
+	}
+
+	.contact-container input,
+	.contact-container textarea {
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 10px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+	}
+
+	.contact-container .contact-button {
+		background-color: #28a745; /* Green button */
+		color: white;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.contact-container .contact-button:hover {
+		background-color: #218838; /* Darker green on hover */
+	}

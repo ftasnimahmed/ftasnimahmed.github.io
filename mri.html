@@ -18,18 +18,10 @@
 			<div id="wrapper">
 
 				<!-- Intro -->
-                <div id="intro">
-                    <h1>Portfolio<br />
-                        Project 4</h1>
-                    
-                        <a href=""></a><a href="https://github.com/ftasnimahmed/T1w-to-T2w-image-translation-using-GANs">@github.</a> <a href="https://www.linkedin.com/in/farah-ahmed-549044243/"></a></p>
-                    <ul class="actions">
-                        <!-- <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li> -->
-                    </ul>
-                </div>
+                
 
 				<!-- Nav -->
-					<nav id="nav">
+					<!-- <nav id="nav">
 						<ul class="links">
 							<li><a href="index.html">Intro</a></li>
                             <li><a href="predictedcarprice.html">Project 1</a></li>
@@ -43,40 +35,95 @@
 							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
-					</nav>
+					</nav> -->
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Post -->
+						
+							          
 							<section class="post">
 								<header class="major">
-									
-									<h1 style="font-size: 55px;">T1w-to-T2w-image-translation-using-GANs</h1>          
-									
+
+									<h3 style="font-size: 2.0rem; font-family: 'Roboto', sans-serif; font-style: normal; font-weight: normal; margin-top: -80px;">T1w to T2w Image <br> Translation Using GANs</h3>                                         
+							
 								</header>
-								<div class="image main"><img src="images/mri.jpg" alt="" /></div>
-                                <h1 style="font-size: 24px;">Project Description: </h1>
+                                <section class="post" style="display: flex; gap: 20px; align-items: left;">
+                                    <div class="image-container" style="flex: 6; margin-top: -40px;">
+                                        <img src="images/mri.jpg" alt="Used Car Price Prediction" style="width: 100%; height: auto; border-radius: 10px;" />
+                                    </div>
+                                    <div class="content-container" style="flex: 1;">
+                                        <div class="tools">
+                                            <h4 style="font-size: 0.7rem; font-family: 'Roboto', sans-serif; margin-bottom: 3px; margin-top: -40px;">Tools and Packages Used:</h4>
+                                            <ul style="list-style-type: disc; padding-left: 0px; font-size: 0.7rem; line-height: 1.5;">
+                                                Python <br> PyTorch <br> Jupyter Notebook <br> DataLoader <br> Torchvision <br> NumPy 
+                                            </ul>                                            
+                                            <h4 style="font-size: 0.7rem; font-family: 'Roboto', sans-serif; margin-bottom: 3px; margin-top: -20px;">Skills and Concepts Used:</h4>
+                                            <ul style="list-style-type: disc; padding-left: 0px; font-size: 0.7rem; line-height: 1.5;">
+                                                Data Augmentation  <br> GAN Architechture <br> Data Transformation <br> Data Visualization <br> Model Train <br> Model Evaluation 
+                                            </ul>  
+                                        </div>
+                                        <!DOCTYPE html>
+                                        <html lang="en">
+                                        <head>
+                                            <meta charset="UTF-8">
+                                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                            <title>Button to GitHub</title>
+                                            <style>
+                                                /* Button Styling */
+                                                .github-button {
+                                                    background-color: black; /* GitHub dark gray background */
+                                                    color: white; /* White text color */
+                                                    padding: 1px 5px; /* Padding inside the button */
+                                                    border: none; /* No border */
+                                                    border-radius: 0px; /* Rounded corners */
+                                                    font-size: 11px; /* Text size */
+                                                    cursor: pointer; /* Pointer cursor on hover */
+                                                    text-decoration: none; /* Remove underline from link */
+                                                    display: inline-block;
+                                                }
+
+                                                /* Button Hover Effect */
+                                                .github-button:hover {
+                                                    background-color: white; /* GitHub green on hover */
+                                                }
+                                            </style>
+                                        </head>
+                                        <body>
+                                            <!-- Button that links to GitHub -->
+                                            <a href="https://github.com/ftasnimahmed/T1w-to-T2w-image-translation-using-GANs" class="github-button" target="_blank">
+                                                Visit GitHub Repo
+                                            </a>
+											<a href="index.html" class="github-button">
+                                                HOME
+                                            </a>
+											
+                                        </body>
+                                        </html>
+
+                                    </div>
+                                </section>
+                                <h3 style="font-size: 1.5rem; font-family: 'Roboto', sans-serif; font-style: normal; font-weight: normal; margin-top: 20px; margin-bottom: 10px; ">Project Description: </h3>
 								<p>
                                     
                                     MRI is a powerful imaging modality commonly used for disease detection, diagnosis, and treatment monitoring. Two most widely used MRI sequences are T1-weighted and T2-weighted scans. Both the images are produced by varying echo time (TE) and repetition time (TR) [1]. The TE and TR can be considered as a variable to switch between T1 and T2 images. The contrast and brightness of the images are predominately determined by T1 properties of tissue. Conversely, T2-weighted images are produced by using longer TE and TR times [5]. In these images, the contrast and brightness are predominately determined by the T2 properties of tissue. Using these T1 and T2 protocols we can highlight certain tissue properties which are specific for diagnosis. From medical image diagnosis perspective, T2 images have higher advantage over T1 since the images acquired using T2 protocol have a greater number of features embedded in the soft tissues. However, T2 protocol is a slow process due to long TE and TR. Therefore, T2 weighted images are often hard to acquire due to high susceptibility to motion artifacts.
-                                    Medical image-to-image translation is a robust approach that involves the synthesis of a missing target modality, guided by a cross-modality mapping [2]. Recently, image-to-image translation networks have appeared as adaptable solutions for predicting and generating images in natural scenes by mapping images to various visual representations, such as edges, segments, semantic labels, as well as mapping labels to realistic images [3]. Mapping T1w-to-T2w MRI is challenging due to their non-linear and distinct characteristics [1]. If we can go beyond these constraints, there is a huge benefit for machine learning algorithms. In this project we are trying to address this problem by generating synthetic data which we cannon practically generate using MRI machines due to hardware limitations. <p>
+                                    Medical image-to-image translation is a robust approach that involves the synthesis of a missing target modality, guided by a cross-modality mapping [2]. Recently, image-to-image translation networks have appeared as adaptable solutions for predicting and generating images in natural scenes by mapping images to various visual representations, such as edges, segments, semantic labels, as well as mapping labels to realistic images [3]. Mapping T1w-to-T2w MRI is challenging due to their non-linear and distinct characteristics [1]. If we can go beyond these constraints, there is a huge benefit for machine learning algorithms. In this project we are trying to address this problem by generating synthetic data which we cannon practically generate using MRI machines due to hardware limitations. </p>
                                 
                                 
-                                <h1 style="font-size: 24px;">Datasets: </h1>
-                                </p>
-                                The problem statement requires T1 and T2 images from an MRI dataset. So, we have chosen MICCAI BraTS 2018 dataset. The dataset consists of T1 and T2. All the data is acquired using clinically acquired 3T multimodal MRI scans. The dataset is acquired as 3D data with multiple slices. So, the dataset processing pipeline has selected mid 64 slices of the 3D images from both modalities and saved separately to a folder.<p>
+								<h3 style="font-size: 1.5rem; font-family: 'Roboto', sans-serif; font-style: normal; font-weight: normal; margin-top: 20px; margin-bottom: 10px; ">Datasets: </h3>
+                                <p>
+                                The problem statement requires T1 and T2 images from an MRI dataset. So, we have chosen MICCAI BraTS 2018 dataset. The dataset consists of T1 and T2. All the data is acquired using clinically acquired 3T multimodal MRI scans. The dataset is acquired as 3D data with multiple slices. So, the dataset processing pipeline has selected mid 64 slices of the 3D images from both modalities and saved separately to a folder.</p>
                                     <div class="image-gallery">
                                         <img src="images/Phase_1_Presentation.001.png" style="width: 500px; height: 300px;" alt="Main Picture" />
                                         </div>
-                                <h1 style="font-size: 24px;">Method: </h1>
-                                </p>
-                                For supervised part, we had paired aligned T1w-T2w images, therefore, we implemented supervised Pix2Pix which is a commonly used mode in GANs. Pix2Pix network consists of one generator (G) and one discriminator (D). The generator takes an image from T1w domain and generate synthetic T2w image, and the discriminator D takes the generated image from G and predicts if it’s real or fake. <p>
+								<h3 style="font-size: 1.5rem; font-family: 'Roboto', sans-serif; font-style: normal; font-weight: normal; margin-top: 20px; margin-bottom: 10px; ">Method: </h3>
+                                <p>
+                                For supervised part, we had paired aligned T1w-T2w images, therefore, we implemented supervised Pix2Pix which is a commonly used mode in GANs. Pix2Pix network consists of one generator (G) and one discriminator (D). The generator takes an image from T1w domain and generate synthetic T2w image, and the discriminator D takes the generated image from G and predicts if it’s real or fake. </p>
                                 
                                 <div class="image-gallery">
                                     <img src="images/Screen Shot 2024-11-22 at 10.27.22 PM.png" style="width: 500px; height: 300px;" alt="Main Picture" />
                                     </div>
                                 
-                                <h1 style="font-size: 24px;">Results: </h1>
+								<h3 style="font-size: 1.5rem; font-family: 'Roboto', sans-serif; font-style: normal; font-weight: normal; margin-top: 20px; margin-bottom: 10px; ">Results: </h3>
                                 <p>
                                     During the inference process using the Pix2Pix GAN, we generated synthetic T2w images corresponding to T1w images. It is worth noting that, similar to supervised learning, the generated images maintained the overall gross structure of the ground truth images. However, the generator smoothed out small features during the synthesis process.
                                 
@@ -84,15 +131,34 @@
                                         <img src="images/Screen Shot 2024-11-22 at 10.36.17 PM.png" style="width: 700px; height: 400px;" alt="Main Picture" />
                                         </div>
                                 </p>
-
-                                    <p>
-                                        <h1 style="font-size: 24px;">Discussion & Conclusion: </h1>
-                                        In this project, I demonstrated the use of a conditional adversarial network for T1w-T2w brain image translation in a supervised learning phase. Using paired and aligned brain datasets for two different MRI contrasts allowed me to achieve better results. The conditional GAN, combined with pixel-wise L1 loss, effectively smoothed out small features by promoting sparsity through L1 regularization. While this approach achieved promising results, incorporating unsupervised methods could further enhance the model's capability by generating new features and handling unpaired datasets, making it more practical for real-world scenarios.
-                                    </p>
-                                
-
-
-                                
+								<h3 style="font-size: 1.5rem; font-family: 'Roboto', sans-serif; font-style: normal; font-weight: normal; margin-top: 20px; margin-bottom: 10px; ">Discussion & Conclusion: </h3>
+								<p>
+                                    In this project, I demonstrated the use of a conditional adversarial network for T1w-T2w brain image translation in a supervised learning phase. Using paired and aligned brain datasets for two different MRI contrasts allowed me to achieve better results. The conditional GAN, combined with pixel-wise L1 loss, effectively smoothed out small features by promoting sparsity through L1 regularization. While this approach achieved promising results, incorporating unsupervised methods could further enhance the model's capability by generating new features and handling unpaired datasets, making it more practical for real-world scenarios.
+                                </p>
+								
+		
+								<!-- Footer -->
+								<section id="contact">
+									<article class="post featured">
+										<header class="major">
+											<p></p>
+											<ul class="icons" style="display: flex; gap: 30px; justify-content: center; list-style: none; padding: 0; margin-bottom: -50px; margin-top: 100px;">
+												<i><a href="https://www.linkedin.com/in/farah-ahmed-549044243/" class="icon brands fa-linkedin" style="font-size: 40px;"><span class="label">LinkedIn</span></a></i>
+												<i><a href="https://github.com/ftasnimahmed?tab=repositories" class="icon brands fa-github" style="font-size: 40px;"><span class="label">GitHub</span></a></i>
+												<i><a href="mailto:farahtasnimahmed800@gmail.com" class="icon solid fa-envelope" style="font-size: 40px;"><span class="label">Email</span></a></i>
+											</ul>
+										</header>
+									</article>
+								</section>
+	
+								<!-- Footer -->
+								<footer id="copyright" style="text-align: center; padding: 20px; background-color: grey; color: #fff; margin-bottom: -50px;">
+									<ul style="list-style: none; padding: 0; margin: 0;">
+										<li>&copy; Farah Ahmed</li>
+										<li>Design: <a href="https://html5up.net" style="color: #007bff; text-decoration: none;">HTML5 UP</a></li>
+									</ul>
+								</footer>
+								
 								
 							</section>
 
@@ -101,10 +167,7 @@
 				
 							
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+				
 
 			</div>
 
